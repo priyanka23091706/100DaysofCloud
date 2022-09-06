@@ -14,11 +14,11 @@
 Fill in your details where you see this icon ✍️
 We have provided a sample Day Journey entry staring at 0. You can delete this example.
 
-## [✍️ Your Name]'s Cloud Journey
+## [✍️ Priyanka Kulkarni]'s Cloud Journey
 
-[✍️ Introduce yourself]
+[✍️ I am certified AWS Devops Professional, want to create a comprehensive set of awslabs for beginners ]
 
-[✍️ Tell us why you started this challenge]
+[✍️ To Create a indepth hands-on tutorials from documentation guide and getting started labs ]
 
 [✍️ Tell us where you want to be at the end of the challenge]
 
