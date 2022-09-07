@@ -1,11 +1,11 @@
 **Add a cover photo like:**
 ![placeholder image](https://via.placeholder.com/1200x600)
 
-# New post title here
+# Light Sail 
 
 ## Introduction
 
-✍️ (Why) Explain in one or two sentences why you choose to do this project or cloud topic for your day's study.
+✍️ This unit we start with compute service Lightsail, very easy to start with and understand AWS as a Service to host websites etc
 
 ## Prerequisite
 
