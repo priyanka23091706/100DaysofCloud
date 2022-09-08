@@ -1,6 +1,6 @@
 <!-- This is a template you can use for quick progress days. It removes a lot of the steps we encourage you to share in the longer template 000-DAY-ARTICLE-LONG-TEMPLATE.MD-->
 
-# Access EC2 from Session manager and send SSH logs to CloudWatch
+# SSH into EC2 Instance whose key pair is lost
 
 ## Cloud Research
 

@@ -1,7 +1,8 @@
 **Add a cover photo like:**
 ![placeholder image](https://via.placeholder.com/1200x600)
 
-# New post title here
+# Find vulnerabilities on EC2 instance using Amazon Inspector
+
 
 ## Introduction
 
