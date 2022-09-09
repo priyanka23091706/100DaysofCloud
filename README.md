@@ -27,10 +27,10 @@ We have provided a sample Day Journey entry staring at 0. You can delete this ex
 
 ## Stepping out the door
 
-- [ ] ☁️ 1 > [My First Day](Journey/001/Readme.md)
-- [ ] ☁️ 2 > [2](Journey/002/Readme.md)
-- [ ] ☁️ 3 > [3](Journey/003/Readme.md)
-- [ ] ☁️ 4 > [](Journey/004/Readme.md)
+- [ ] ☁️ 1 > [EC2 Introduction](Journey/001/Readme.md)
+- [ ] ☁️ 2 > [Session Manager](Journey/002/Readme.md)
+- [ ] ☁️ 3 > [AWS CLI](Journey/003/Readme.md)
+- [ ] ☁️ 4 > [Lost Keypair](Journey/004/Readme.md)
 - [ ] ☁️ 5 > [](Journey/005/Readme.md)
 - [ ] ☁️ 6 > [](Journey/006/Readme.md)
 - [ ] ☁️ 7 > [](Journey/007/Readme.md)

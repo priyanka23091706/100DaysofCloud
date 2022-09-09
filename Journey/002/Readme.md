@@ -3,7 +3,7 @@
 # Access EC2 from Session manager and send SSH logs to CloudWatch
 
 ## Cloud Research
-
+![Journey/002/Architecture-Diagram-EC2-SSM.png]
 - ✍️ Document your trial and errors. Share what you tried to learn and understand about the cloud topic or while completing micro-project.
 
 ## Social Proof
