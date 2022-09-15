@@ -1,50 +1,44 @@
-**Add a cover photo like:**
-![placeholder image](https://via.placeholder.com/1200x600)
+<!-- This is a template you can use for quick progress days. It removes a lot of the steps we encourage you to share in the longer template 000-DAY-ARTICLE-LONG-TEMPLATE.MD-->
 
-# New post title here
-
-## Introduction
-
-✍️ (Why) Explain in one or two sentences why you choose to do this project or cloud topic for your day's study.
-
-## Prerequisite
-
-✍️ (What) Explain in one or two sentences the base knowledge a reader would need before describing the the details of the cloud service or topic.
-
-## Use Case
-
-- 🖼️ (Show-Me) Create an graphic or diagram that illustrate the use-case of how this knowledge could be applied to real-world project
-- ✍️ (Show-Me) Explain in one or two sentences the use case
+# Create Continuous Delivery in EC2 using CodeDeploy and CodePipeline
 
 ## Cloud Research
 
-- ✍️ Document your trial and errors. Share what you tried to learn and understand about the cloud topic or while completing micro-project.
-- 🖼️ Show as many screenshot as possible so others can experience in your cloud research.
+- ✍️ Steps and Tips 
+- Create an EC2 Instance with public IP, Role and HTTP Security group 
 
-## Try yourself
+- UserData
+```
+#!/bin/bash
 
-✍️ Add a mini tutorial to encourage the reader to get started learning something new about the cloud.
+sudo su
+yum -y update
+yum install ruby -y
+wget https://aws-codedeploy-us-east-1.s3.us-east-1.amazonaws.com/latest/install
+chmod +x ./install
+./install auto
+yum install httpd -y
+systemctl start httpd
 
-### Step 1 — Summary of Step
+```
+- Create Code Commit Repository 
+  Add Appspec.yaml file 
+  ```
+  version: 0.0
+  os: linux
+  files:
+  - source: /index.html
+    destination: /var/www/html/
 
-![Screenshot](https://via.placeholder.com/500x300)
+  ```
 
-### Step 1 — Summary of Step
-
-![Screenshot](https://via.placeholder.com/500x300)
-
-### Step 3 — Summary of Step
-
-![Screenshot](https://via.placeholder.com/500x300)
-
-## ☁️ Cloud Outcome
-
-✍️ (Result) Describe your personal outcome, and lessons learned.
-
-## Next Steps
-
-✍️ Describe what you think you think you want to do next.
-
+- And add any index.html page to code commit repository
+- Create Code Deployment group 
+- Create Code Pipeline 
+- Command to check the logs of code deploy agent 
+ ```
+ less /var/log/aws/codedeploy-agent/codedeploy-agent.log
+ ```
 ## Social Proof
 
 ✍️ Show that you shared your process on Twitter or LinkedIn
