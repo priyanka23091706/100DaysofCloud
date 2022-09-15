@@ -4,7 +4,37 @@
 
 ## Cloud Research
 
-- ✍️ Document your trial and errors. Share what you tried to learn and understand about the cloud topic or while completing micro-project.
+- ✍️ Steps and Tips 
+- Create an EC2 Instance with public IP and HTTP Security group 
+
+- UserData
+```
+#!/bin/bash
+
+sudo su
+yum -y update
+yum install ruby -y
+wget https://aws-codedeploy-us-east-1.s3.us-east-1.amazonaws.com/latest/install
+chmod +x ./install
+./install auto
+yum install httpd -y
+systemctl start httpd
+
+```
+- Create Code Commit Repository 
+  Add Appspec.yaml file 
+  ```
+  version: 0.0
+os: linux
+files:
+  - source: /index.html
+    destination: /var/www/html/
+  ```
+And any index.html page 
+
+- Create Code Deployment group 
+   To EC2 instance 
+- Create Code Pipeline 
 
 ## Social Proof
 
