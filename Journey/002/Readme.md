@@ -4,7 +4,7 @@
 
 ## Cloud Research
 <p align="center">
-  <img src="Journey/002/Architecture-Diagram-EC2-SSM.png">
+  <img src="Architecture-Diagram-EC2-SSM.png">
 </p>
 ![Journey/002/Architecture-Diagram-EC2-SSM.png]
 - ✍️ Document your trial and errors. Share what you tried to learn and understand about the cloud topic or while completing micro-project.
