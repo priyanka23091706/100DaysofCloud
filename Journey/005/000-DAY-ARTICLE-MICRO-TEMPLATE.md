@@ -25,15 +25,15 @@ systemctl start httpd
   Add Appspec.yaml file 
   ```
   version: 0.0
-os: linux
-files:
+  os: linux
+  files:
   - source: /index.html
     destination: /var/www/html/
-  ```
-And any index.html page 
 
+  ```
+
+- And add any index.html page to code commit repository
 - Create Code Deployment group 
-   To EC2 instance 
 - Create Code Pipeline 
 
 ## Social Proof
