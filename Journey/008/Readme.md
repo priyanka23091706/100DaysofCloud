@@ -18,11 +18,11 @@
 - Setup Inspector 
 
 - Assessment Targets
-![Alt text](Journey/008/AssessmentTargets.png?raw=true "Assessment Targets")
+![Assessment Targets](//Journey/008/AssessmentTargets.png?raw=true "Assessment Targets")
 - Assessment Templates
-![Alt text](Journey/008/AssessmentTemplate.png?raw=true "Assessment Targets")
+![Assessment Template](/Journey/008/AssessmentTemplate.png?raw=true "Assessment Template")
 - Assessment Run
-![Alt text](Journey/008/AssessmentRun.png?raw=true "Assessment Targets")
+![Assessment Run](/Journey/008/AssessmentRun.png?raw=true "Assessment Run")
 ## Prerequisite
 
 ✍️ (What) Explain in one or two sentences the base knowledge a reader would need before describing the the details of the cloud service or topic.
