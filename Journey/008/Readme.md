@@ -6,8 +6,23 @@
 
 ## Introduction
 
-✍️ (Why) Explain in one or two sentences why you choose to do this project or cloud topic for your day's study.
+✍️ Tips and Steps 
+- Launch an EC2 instance 
+- Download the agent installation script by running one of the following commands:
+```
+ wget https://inspector-agent.amazonaws.com/linux/latest/install
 
+ curl -O https://inspector-agent.amazonaws.com/linux/latest/install
+ sudo bash install
+```
+- Setup Inspector 
+
+- Assessment Targets
+![Alt text](Journey/008/AssessmentTargets.png?raw=true "Assessment Targets")
+- Assessment Templates
+![Alt text](Journey/008/AssessmentTemplate.png?raw=true "Assessment Targets")
+- Assessment Run
+![Alt text](Journey/008/AssessmentRun.png?raw=true "Assessment Targets")
 ## Prerequisite
 
 ✍️ (What) Explain in one or two sentences the base knowledge a reader would need before describing the the details of the cloud service or topic.
