@@ -1,7 +1,7 @@
 **Add a cover photo like:**
 ![placeholder image](https://via.placeholder.com/1200x600)
 
-# New post title here
+# AWS S3 Multipart Upload using AWS CLI
 
 ## Introduction
 
@@ -9,41 +9,66 @@
 
 ## Prerequisite
 
-✍️ (What) Explain in one or two sentences the base knowledge a reader would need before describing the the details of the cloud service or topic.
+✍️ Root login and split the file 
+```
+## Root login
+sudo -s 
+## split the file 
+split -b 40M video.mp4
+## Create multipar uplaod 
+aws s3api create-multipart-upload --bucket s3multipart-final-2309 --key video.mp4
+## Upload all parts 1 xaa, 2 xab, 3 xac, 4 xad
+aws s3api upload-part --bucket s3multipart-final-2309 --key video.mp4 --part-number 1 --body xaa --upload-id 13YclVDlLe8HGcy0QgR8muGpBwqqiT5NSMqaAKCyplmGIAGhDyarCN0dfcST9z5xC0jgF83URPT0Q6dPofLTT3gviL9szRixBjg3tQWi3FBBpIsEwVgB3wuwqSEZUcdZmhY.8LfIQV_De_Kr.1rDtg--
+```
 
-## Use Case
 
-- 🖼️ (Show-Me) Create an graphic or diagram that illustrate the use-case of how this knowledge could be applied to real-world project
-- ✍️ (Show-Me) Explain in one or two sentences the use case
+Create list.json with path number and Etags
+{
 
-## Cloud Research
+  "Parts": [
 
-- ✍️ Document your trial and errors. Share what you tried to learn and understand about the cloud topic or while completing micro-project.
-- 🖼️ Show as many screenshot as possible so others can experience in your cloud research.
+    {
 
-## Try yourself
+      "PartNumber": 1,
 
-✍️ Add a mini tutorial to encourage the reader to get started learning something new about the cloud.
+      "ETag": "\"70418ed5e552ea21deb8785359e69e28\""
 
-### Step 1 — Summary of Step
+    },
 
-![Screenshot](https://via.placeholder.com/500x300)
+    {
 
-### Step 1 — Summary of Step
+      "PartNumber": 2,
 
-![Screenshot](https://via.placeholder.com/500x300)
+      "ETag": "\"e0c16ead703bfcd1b36b339d9ae1901d\""
 
-### Step 3 — Summary of Step
+    },
 
-![Screenshot](https://via.placeholder.com/500x300)
+    {
 
-## ☁️ Cloud Outcome
+      "PartNumber": 3,
 
-✍️ (Result) Describe your personal outcome, and lessons learned.
+      "ETag": "\"56734bc19b453aab5144de4454945609\""
 
-## Next Steps
+    },
 
-✍️ Describe what you think you think you want to do next.
+    {
+
+      "PartNumber": 4,
+
+      "ETag": "\"7786233d68592caf07e93521cbd0a80e\""
+
+    }
+
+  ]
+
+}
+
+```
+## Complete the multipart upload 
+
+aws s3api complete-multipart-upload --multipart-upload file://list.json  --bucket s3multipart-final-2309 --key video.mp4 --upload-id 13YclVDlLe8HGcy0QgR8muGpBwqqiT5NSMqaAKCyplmGIAGhDyarCN0dfcST9z5xC0jgF83URPT0Q6dPofLTT3gviL9szRixBjg3tQWi3FBBpIsEwVgB3wuwqSEZUcdZmhY.8LfIQV_De_Kr.1rDtg--
+
+```
 
 ## Social Proof
 
