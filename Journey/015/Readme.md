@@ -1,49 +1,99 @@
 **Add a cover photo like:**
 ![placeholder image](https://via.placeholder.com/1200x600)
 
-# New post title here
+# QLDB Database
 
 ## Introduction
 
-✍️ (Why) Explain in one or two sentences why you choose to do this project or cloud topic for your day's study.
+✍️ Amazon Quantum Ledger Database (Amazon QLDB) is a fully managed ledger database that provides a transparent, immutable, and cryptographically verifiable transaction log owned by a central trusted authority.
 
-## Prerequisite
+Amazon QLDB to track application data changes, and maintain a complete and verifiable history of changes over time.
 
-✍️ (What) Explain in one or two sentences the base knowledge a reader would need before describing the the details of the cloud service or topic.
 
-## Use Case
 
-- 🖼️ (Show-Me) Create an graphic or diagram that illustrate the use-case of how this knowledge could be applied to real-world project
-- ✍️ (Show-Me) Explain in one or two sentences the use case
+## Lab Steps
 
-## Cloud Research
+1. Create a Ledger
 
-- ✍️ Document your trial and errors. Share what you tried to learn and understand about the cloud topic or while completing micro-project.
-- 🖼️ Show as many screenshot as possible so others can experience in your cloud research.
+2. Create tables and insert values
+```create table PersonalInfo;
+INSERT INTO PersonalInfo << 
 
-## Try yourself
+{
 
-✍️ Add a mini tutorial to encourage the reader to get started learning something new about the cloud.
+    'PID' : '1',
 
-### Step 1 — Summary of Step
+    'FirstName' : 'Paul',
 
-![Screenshot](https://via.placeholder.com/500x300)
+    'LastName' : 'Lewis',
 
-### Step 1 — Summary of Step
+    'DOB' : `1994-08-19T`,
 
-![Screenshot](https://via.placeholder.com/500x300)
+    'GovId' : 'LEWISR261LL',
 
-### Step 3 — Summary of Step
+    'GovIdType' : 'Driver License',
 
-![Screenshot](https://via.placeholder.com/500x300)
+    'Address' : '1719 University Street, Seattle, WA, 98109'
 
-## ☁️ Cloud Outcome
+},
 
-✍️ (Result) Describe your personal outcome, and lessons learned.
+{
 
-## Next Steps
+    'PID' : '2',
 
-✍️ Describe what you think you think you want to do next.
+    'FirstName' : 'Brent',
+
+    'LastName' : 'Logan',
+
+    'DOB' : `1967-07-03T`,
+
+    'GovId' : '519-01-0001',
+
+    'GovIdType' : 'Social Security Number',
+
+    'Address' : '43 Stockert Hollow Road, Everett, WA, 98203'
+
+}
+```
+
+3. View the table updation history
+```
+INSERT INTO VehicleInfo VALUE
+
+{
+
+    'VIN' : 'KM8SRDHF6EU074761',
+
+    'RegNum' : 1722,
+
+    'State' : 'WA',
+
+    'City' : 'Kent',
+
+    'Manufacture' : 'Tesla',
+
+    'Model' : 'Model S',
+
+    'PersonID' : '1',
+
+    'Owner' : 'Paul Lewis',
+
+    'Year' : `2020-06-25T`
+
+}
+```
+
+Update
+
+```
+UPDATE VehicleInfo AS v SET v.Owner = 'Brent Logan', v.PersonID = '2' WHERE v.VIN = 'KM8SRDHF6EU074761'
+```
+
+Check History 
+
+```
+SELECT * FROM history(VehicleInfo)
+```
 
 ## Social Proof
 

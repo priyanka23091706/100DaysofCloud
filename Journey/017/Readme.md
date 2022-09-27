@@ -1,7 +1,7 @@
 **Add a cover photo like:**
 ![placeholder image](https://via.placeholder.com/1200x600)
 
-# New post title here
+# Getting Started with Amazon Elastic Container Service using Fargate
 
 ## Introduction
 

@@ -1,15 +1,27 @@
 **Add a cover photo like:**
 ![placeholder image](https://via.placeholder.com/1200x600)
 
-# New post title here
+# Introduction to ECS
 
 ## Introduction
 
 ✍️ (Why) Explain in one or two sentences why you choose to do this project or cloud topic for your day's study.
 
-## Prerequisite
+## Steps for lab
 
-✍️ (What) Explain in one or two sentences the base knowledge a reader would need before describing the the details of the cloud service or topic.
+✍️ 1. Create a Security Group for the ECS Cluster
+
+2. Create a Key Pair for the EC2 instances, inside the ECS Cluster
+
+3. Launching an ECS Cluster
+
+4. Create Task definitions.
+
+5. Create a Service and start HTTPD container in ECS
+
+6. Test the HTTPD container in ECS Cluster
+
+7. SSH into the underlying EC2 instance and run Docker commands
 
 ## Use Case
 
